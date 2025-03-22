@@ -53,10 +53,20 @@ function Calendar({
         day_hidden: 'invisible',
         ...classNames,
       }}
-      components={{
-        IconLeft: ({ ...props }) => <ChevronLeft className="h-4 w-4" />,
-        IconRight: ({ ...props }) => <ChevronRight className="h-4 w-4" />,
-      }}
+      // components={{
+      //   Button: ({ onClick, dir }: { onClick?: (event: React.MouseEvent<HTMLButtonElement>) => void; dir: string }) => (
+      //     <button
+      //       type="button"
+      //       onClick={onClick}
+      //       className={cn(
+      //         'nav_button',
+      //         dir === 'prev' ? 'nav_button_previous' : 'nav_button_next'
+      //       )}
+      //     >
+      //       {dir === 'prev' ? <ChevronLeft /> : <ChevronRight />}
+      //     </button>
+      //   ),
+      // }}
       {...props}
     />
   );

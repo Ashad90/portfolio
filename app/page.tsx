@@ -84,7 +84,7 @@ export default function Home() {
               <Link 
                 href="/contact" 
                 onClick={scrollToContact}
-                className="bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+                className="bg-black dark:bg-white text-white dark:text-black px-4 py-2 rounded-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors sm:mx-auto"
               >
                 Contactez-Moi
               </Link>
@@ -97,18 +97,18 @@ export default function Home() {
       {/* Section Cv */}
       <section className="pt-32 pb-16 px-4 md:px-8">
         <div className="max-w-7xl mx-auto">
-          <p className="text-xl text-gray-400 dark:text-gray-300 text-center mb-8">A propos</p>
-          <h1 className="text-3xl md:text-2xl font-bold text-center mb-8">
-            Hello ! Moi c&apos;est Ashad. Je suis Web Designer&Developer Centrafricain<br />
-            Juste en dessous vous trouverez tout ce que vous voulez savoir sur moi<br />
+        <h2 className="text-3xl font-bold text-center mb-8">A propos</h2>
+          <h1 className="text-3xl sm:text-2xl font-bold text-center mb-8">
+            Hello ! Moi c&apos;est Ashad,  <span className='font-extrabold text-cyan-700 dark:text-green-700'>Web Designer</span>&<span className='font-extrabold text-green-700 dark:text-cyan-700'>Developer</span> Centrafricain<br />
+            Juste en dessous vous trouverez tout ce qu&apos;il ya à savoir sur moi<br />
             Et vous aurez aussi la possibilité de télécharger mon Cv
           </h1>
           <div className="flex justify-center">
             <button
               onClick={handleDownloadCV}
-              className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition-colors"
+              className="flex items-center gap-2 bg-black text-white px-6 py-3 rounded-full sm:mx-auto hover:bg-gray-800 transition-colors"
             >
-              <Download className="w-5 h-5" />
+              <Download className="w-5 h-5 animate-bounce" />
               Mon CV
             </button>
           </div>
@@ -125,12 +125,12 @@ export default function Home() {
                 src="https://images.unsplash.com/photo-1600210492486-724fe5c67fb0"
                 alt="Web Design"
                 fill
-                className="object-cover"
+                className="object-cover cursor-pointer hover:animate-pulse duration-75"
               />
             </div>
             <div className="flex justify-between items-end">
               <div>
-                <h2 className="text-3xl font-medium text-gray-900 dark:text-white mb-2">Web Design</h2>
+                <h2 className="text-3xl font-semibold text-blue-700 dark:text-green-700 mb-2">Web Design</h2>
                 <p className="text-gray-600 dark:text-gray-400">Apartments, homes and vacation properties.</p>
               </div>
               <Link
@@ -149,41 +149,40 @@ export default function Home() {
                 src="https://images.unsplash.com/photo-1604014237800-1c9102c219da"
                 alt="Web Development"
                 fill
-                className="object-cover"
+                className="object-cover cursor-pointer hover:animate-pulse duration-75"
               />
             </div>
             <div className="flex justify-between items-end">
               <div>
-                <h2 className="text-3xl font-medium text-gray-900 dark:text-white mb-2">Web Development</h2>
-                <p className="text-gray-600 dark:text-gray-400">Creative and inviting retail and hospitality environments.</p>
+                <h2 className="text-3xl font-semibold text-blue-700 dark:text-green-700 mb-2">Web Development</h2>
+                <p className="text-gray-600 dark:text-gray-400">Un site web dynamique et ultra fluide.</p>
               </div>
               <Link
                 href="/projects/commercial"
-                className="bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+                className="bg-black dark:bg-white text-white dark:text-black text-sm px-6 py-3 rounded-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
               >
                 See Project
               </Link>
             </div>
           </div>
-
-          {/* Frontend */}
+          {/* Frontend */} 
           <div>
             <div className="relative aspect-[16/9] mb-8">
               <Image
                 src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6"
                 alt="Frontend"
                 fill
-                className="object-cover"
+                className="object-cover cursor-pointer hover:animate-pulse duration-75"
               />
             </div>
-            <div className="flex justify-between items-end">
+            <div className="flex justify-between mx-auto items-end">
               <div>
-                <h2 className="text-3xl font-medium text-gray-900 dark:text-white mb-2">Frontend</h2>
-                <p className="text-gray-600 dark:text-gray-400">Temporary and permanent branded spaces.</p>
+                <h2 className="text-3xl font-semibold text-blue-700 dark:text-green-700 mb-2">Frontend</h2>
+                <p className="text-gray-600 dark:text-gray-400">Un Design de qualité selon vos besoins.</p>
               </div>
               <Link
                 href="/projects/experiential"
-                className="bg-black dark:bg-white text-white dark:text-black px-6 py-3 rounded-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
+                className="bg-black dark:bg-white text-sm text-white dark:text-black px-6 py-3 rounded-md hover:bg-gray-800 dark:hover:bg-gray-100 transition-colors"
               >
                 See Project
               </Link>
@@ -208,7 +207,7 @@ export default function Home() {
                 <input
                   type="text"
                   id="fullName"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent"
                   required
                 />
               </div>
@@ -217,7 +216,7 @@ export default function Home() {
                 <input
                   type="email"
                   id="email"
-                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
+                  className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent"
                   required
                 />
               </div>
@@ -226,7 +225,7 @@ export default function Home() {
               <label htmlFor="project" className="block text-sm font-medium text-gray-700 mb-1">Type de projet</label>
               <select
                 id="project"
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent"
                 required
               >
                 <option value="">Selectionnez un type projet</option>
@@ -240,7 +239,7 @@ export default function Home() {
               <textarea
                 id="message"
                 rows={4}
-                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-black focus:border-transparent"
+                className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-gray-400 focus:border-transparent"
                 required
               ></textarea>
             </div>
